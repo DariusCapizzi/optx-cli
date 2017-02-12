@@ -7,14 +7,14 @@ const optcliPackage = require(path.join(__dirname, '../', 'package.json'))
 
 const loadCmd = (cmd) => {
   const self = this
-  return function() {
+  return function () {
     require(`../lib/cmd/${cmd}`).apply(self, arguments)
   }
 }
 
-//default log level
+// Default log level
 winston.level = 'info'
-function increaseVerbosity(v) {
+function increaseVerbosity (v) {
   winston.level = 'debug'
 }
 
@@ -65,7 +65,7 @@ program
   .description('Set the optimizely API token in a project folder')
   .action(loadCmd('set-token'))
 
-//Show help if no arguments are passed
+// Show help if no arguments are passed
 if (!process.argv.slice(2).length) {
   program._name = process.argv[1]
   program._name = program._name.substr(program._name.lastIndexOf('/') + 1)
