@@ -1,3 +1,6 @@
+.optx
+bin/.optx
+
 # Logs
 logs
 *.log
