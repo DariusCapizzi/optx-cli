@@ -61,9 +61,9 @@ program
   .action(loadCmd('push-variation'))
 
 program
-  .command('set-token [token]')
+  .command('set-token [clientId] [clientSecret]')
   .description('Set the optimizely API token in a project folder')
-  .action(loadCmd('set-token'))
+  .action(loadCmd('set-credentials'))
 
 // Show help if no arguments are passed
 if (!process.argv.slice(2).length) {
