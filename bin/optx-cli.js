@@ -89,6 +89,11 @@ program
   .description('Authorize OptX-CLI using OAuth2')
   .action(loadCmd('authorize'))
 
+program
+  .command('refresh')
+  .description('Generate new OAuth2 credentials using your refresh token')
+  .action(loadCmd('refresh'))
+
 // Show help if no arguments are passed
 if (!process.argv.slice(2).length) {
   program._name = process.argv[1]
