@@ -10,8 +10,12 @@
     "optx-cli": "bin/optx-cli.js"
   },
   "dependencies": {
+    "babel-core": "^6.23.1",
+    "babel-preset-es2015": "^6.22.0",
     "bluebird": "^3.4.7",
     "commander": "^2.9.0",
+    "doshii-sdk": "^1.0.6",
+    "optimizely-oauth2": "^1.0.3",
     "promptly": "^2.1.0",
     "winston": "^2.3.1"
   },

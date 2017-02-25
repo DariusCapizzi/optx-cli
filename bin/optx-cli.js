@@ -12,11 +12,30 @@ const loadCmd = (cmd) => {
   }
 }
 
+const myCustomLevels = {
+  levels: {
+    info: 0,
+    success: 1,
+    debug: 2,
+    warning: 3,
+    error: 4
+  },
+  colors: {
+    info: 'white',
+    success: 'green',
+    debug: 'blue',
+    warning: 'yellow',
+    error: 'red'
+  }
+}
+
 // Default log level
 winston.level = 'info'
 function increaseVerbosity (v) {
   winston.level = 'debug'
 }
+
+winston.addColors(myCustomLevels.colors)
 
 program
   .version(optcliPackage.version)
@@ -61,9 +80,14 @@ program
   .action(loadCmd('push-variation'))
 
 program
-  .command('set-token [clientId] [clientSecret]')
+  .command('set-client [clientId] [clientSecret]')
   .description('Set the optimizely API token in a project folder')
-  .action(loadCmd('set-credentials'))
+  .action(loadCmd('set-client'))
+
+program
+  .command('authorize')
+  .description('Authorize OptX-CLI using OAuth2')
+  .action(loadCmd('authorize'))
 
 // Show help if no arguments are passed
 if (!process.argv.slice(2).length) {
