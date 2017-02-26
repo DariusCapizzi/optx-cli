@@ -94,6 +94,11 @@ program
   .description('Generate new OAuth2 credentials using your refresh token')
   .action(loadCmd('refresh'))
 
+program
+  .command('init-project')
+  .description('TBD')
+  .action(loadCmd('init-project'))
+
 // Show help if no arguments are passed
 if (!process.argv.slice(2).length) {
   program._name = process.argv[1]

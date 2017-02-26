@@ -16,6 +16,7 @@
     "commander": "^2.9.0",
     "doshii-sdk": "^1.0.6",
     "optimizely-oauth2": "^1.0.5",
+    "optimizely-x-node": "^0.0.1",
     "promptly": "^2.1.0",
     "winston": "^2.3.1"
   },
