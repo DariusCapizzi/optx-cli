@@ -1401,9 +1401,9 @@ open@^0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/open/-/open-0.0.5.tgz#42c3e18ec95466b6bf0dc42f3a2945c3f0cad8fc"
 
-optimizely-oauth2@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/optimizely-oauth2/-/optimizely-oauth2-1.0.3.tgz#e3cd262972f0fdb3e3a86d60b6f751392b8bd258"
+optimizely-oauth2@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/optimizely-oauth2/-/optimizely-oauth2-1.0.5.tgz#53a6164fcb883c95d6731eb007fe7bf1f23b98cd"
   dependencies:
     bluebird "^3.4.7"
     express "^4.14.1"
