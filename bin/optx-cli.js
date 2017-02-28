@@ -95,9 +95,14 @@ program
   .action(loadCmd('refresh'))
 
 program
-  .command('init-project')
-  .description('TBD')
+  .command('init-project <projectId>')
+  .description('Create a new project, or fetch one remotely')
   .action(loadCmd('init-project'))
+
+program
+  .command('list-projects')
+  .description('Return a list of project IDs and names associated to your account')
+  .action(loadCmd('list-projects'))
 
 // Show help if no arguments are passed
 if (!process.argv.slice(2).length) {
